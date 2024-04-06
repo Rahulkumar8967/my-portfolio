@@ -1,0 +1,14 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Apply Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Set font family for HTML */
+@layer base {
+    html {
+        font-family: 'Raleway', sans-serif;
+    }
+}
