@@ -14,12 +14,13 @@ function App() {
  
 
   return (
-    <div className="bg-black text-white font-bold">
+    //bg-gradient-to-b from-black to-gray-800
+    <div className="">
       <Navbar />
       <Home />
       <About />
       <Portfolio />
-    <Skills />
+      <Skills />
 
       <SocialLink />
       <Contact />

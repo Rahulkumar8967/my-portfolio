@@ -1,12 +1,9 @@
 import React from "react";
+import Qualification from "./Qualification"; // Import the Qualification component
 
 const About = () => {
   return (
-    <div
-      id='about'
-      className="px-4 py-8"
-      style={{ backgroundColor: "black", color: "white" }}
-    >
+    <div id="about" className="px-4 py-8 text-white font-bold">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
           <h2 className="text-4xl font-bold border-b-4 border-gray-500 inline-block">
@@ -27,42 +24,13 @@ const About = () => {
               officia optio, corporis eius reprehenderit sit eum tenetur enim
               reiciendis at exercitationem pariatur atque, ea dolorum explicabo
               quas. Asperiores, nobis quibusdalorem20 Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Cum velit repudiandae veniam! Illo,
-              nobis repellat labore odit architecto, nostrum voluptas veritatis
-              incidunt doloribus neque velit quia, ducimus iusto consectetur
-              atque!
+              
             </p>
           </div>
 
-          {/* Fix this part of text white and background grey */}
+          {/* Replace Featured Projects section with Qualification component */}
           <div className="md:w-1/2 mt-8 md:mt-0">
-            <div className="bg-gray-700 p-6 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4 text-white">
-                Featured Projects
-              </h3>
-              <div className="mb-4">
-                <h4 className="text-xl font-bold mb-2 text-white">Project 1</h4>
-                <p className="text-white">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quae, enim.
-                </p>
-              </div>
-              <div className="mb-4">
-                <h4 className="text-xl font-bold mb-2 text-white">Project 2</h4>
-                <p className="text-white">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quae, enim.
-                </p>
-              </div>
-              <div className="mb-4">
-                <h4 className="text-xl font-bold mb-2 text-white">Project 3</h4>
-                <p className="text-white">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quae, enim.
-                </p>
-              </div>
-              {/* Add more projects or skills here */}
-            </div>
+            <Qualification />
           </div>
         </div>
       </div>

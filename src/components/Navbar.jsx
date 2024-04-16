@@ -48,7 +48,7 @@ function Navbar() {
                 href="#my-portfolio"
                 className="text-white hover:bg-gray-700 px-3 py-2 rounded-md no-underline"
               >
-                Portfolio
+               Project
               </a>
               <a
                 href="#contact"

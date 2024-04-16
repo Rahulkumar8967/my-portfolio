@@ -23,24 +23,24 @@ const Skills = () => {
         <div className="bg-indigo-900 font-poppins flex flex-col items-center lg:h-[19rem] md:h-72 h-64 lg:w-[22.4rem] w-80 pt-4 rounded-3xl mb-6 md:mb-0">
           <h6 className="mb-4 md:mt-5">Frontend Developer</h6>
           <div className="grid grid-cols-2 gap-6 md:gap-x-12 gap-x-10">
-            <SkillWithCheckIcon skill="HTML" level="Advance" />
-            <SkillWithCheckIcon skill="TailwindCss" level="Intermediate" />
-            <SkillWithCheckIcon skill="Javascript" level="Intermediate" />
-            <SkillWithCheckIcon skill="Git & Github" level="Intermediate" />
-            <SkillWithCheckIcon skill="React" level="Intermediate" />
-            <SkillWithCheckIcon skill="UI & UX design" level="Intermediate" />
+            <SkillWithCheckIcon skill="HTML" level="" />
+            <SkillWithCheckIcon skill="TailwindCss" level="" />
+            <SkillWithCheckIcon skill="Javascript" level="" />
+            <SkillWithCheckIcon skill="Git & Github" level="" />
+            <SkillWithCheckIcon skill="React" level="" />
+            <SkillWithCheckIcon skill="UI & UX design" level="" />
           </div>
         </div>
 
         <div className="bg-indigo-900 font-poppins flex flex-col items-center lg:h-[19rem] md:h-72 h-64 lg:w-[22.4rem] w-80 pt-4 rounded-3xl mb-6 md:mb-0">
           <h6 className="mb-4 md:mt-5">Backend Developer</h6>
           <div className="grid grid-cols-2 gap-6 md:gap-x-12 gap-x-10">
-            <SkillWithCheckIcon skill="Node JS" level="Intermediate" />
-            <SkillWithCheckIcon skill="Express JS" level="Intermediate" />
-            <SkillWithCheckIcon skill="Mongo DB" level="Intermediate" />
-            <SkillWithCheckIcon skill="My SQL" level="Intermediate" />
-            <SkillWithCheckIcon skill="SQL" level="Basic" />
-            <SkillWithCheckIcon skill="API" level="Basic" />
+            <SkillWithCheckIcon skill="Node JS" level="" />
+            <SkillWithCheckIcon skill="Express JS" level="" />
+            <SkillWithCheckIcon skill="Mongo DB" level="" />
+            <SkillWithCheckIcon skill="My SQL" level="" />
+            <SkillWithCheckIcon skill="SQL" level="" />
+            <SkillWithCheckIcon skill="API" level="" />
           </div>
         </div>
       </div>
