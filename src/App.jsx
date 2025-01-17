@@ -4,11 +4,9 @@ import Contact from './components/Contact'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Portfolio from './components/Portfolio'
+import Qualification from './components/Qualification'
 import SocialLink from './components/SocialLink'
 import Skills from './components/Work'
-
-
-
 
 function App() {
  
@@ -20,8 +18,8 @@ function App() {
       <Home />
       <About />
       <Portfolio />
+      <Qualification/>
       <Skills />
-
       <SocialLink />
       <Contact />
     </div>

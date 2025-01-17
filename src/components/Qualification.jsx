@@ -1,156 +1,100 @@
-import { React, useState } from "react";
-import "../App.css";
+// eslint-disable-next-line no-unused-vars
+import { React, useState } from 'react';
+import '../App.css';
 
 const Qualification = () => {
-  const [activeTab, setActiveTab] = useState("Experience");
+    const [activeTab, setActiveTab] = useState('Experience');
 
-  const handleExperienceClick = () => {
-    setActiveTab("Experience");
-  };
+    const handleExperienceClick = () => {
+        setActiveTab('Experience');
+    };
 
-  const handleQualificationClick = () => {
-    setActiveTab("Qualification");
-  };
+    const handleQualificationClick = () => {
+        setActiveTab('Qualification');
+    };
 
-  return (
-    <section
-      id="qualification"
-      className="mt-32 flex flex-col justify-center items-center text-white md:scroll-mt-24 scroll-mt-24"
-    >
-      <div className="text-center font-poppins mb-3">
-        <h1 className="md:text-4xl font-medium">Qualification</h1>
-        <p className="text-slate-300 md:text-lg text-sm -mt-2">
-          My Personel Journey
-        </p>
-      </div>
-
-      <div className="flex md:gap-5 gap-4">
-        <div
-          className={`flex items-center cursor-pointer hover:text-indigo-400 ${
-            activeTab === "Experience" ? "text-indigo-400" : ""
-          }`}
-          onClick={handleExperienceClick}
+    return (
+        <section
+            id="qualification"
+            className="mt-32 flex flex-col items-center text-white px-6 py-12 md:scroll-mt-24"
         >
-          <i className="fa-solid fa-graduation-cap mr-2 mb-2 md:text-base text-sm"></i>
-          <h5 className="md:text-xl text-lg">Education</h5>
-        </div>
+            {/* Header Section */}
+            <div className="text-center font-poppins mb-6">
+                <h1 className="md:text-4xl  text-4xl font0bold inline border-b border-gray-500">Qualification</h1>
+                <p className="text-slate-300 text-lg mt-2">My Personal Journey</p>
+            </div>
 
-        <div
-          className={`flex items-center cursor-pointer hover:text-indigo-400 ${
-            activeTab === "Qualification" ? "text-indigo-400" : ""
-          }`}
-          onClick={handleQualificationClick}
-        >
-          <i className="fa-solid fa-briefcase mr-2 mb-2 md:text-base text-sm"></i>
-          <h5 className="md:text-xl text-lg">Experience</h5>
-        </div>
-      </div>
+            {/* Tabs */}
+            <div className="flex justify-center gap-6 mb-8">
+                <div
+                    className={`cursor-pointer flex items-center gap-2 px-4 py-2 rounded-lg transition ${
+                        activeTab === 'Experience' ? 'bg-indigo-500 text-white' : 'bg-gray-700 text-slate-300'
+                    } hover:bg-indigo-400`}
+                    onClick={handleExperienceClick}
+                >
+                    <i className="fa-solid fa-graduation-cap"></i>
+                    <span>Education</span>
+                </div>
+                <div
+                    className={`cursor-pointer flex items-center gap-2 px-4 py-2 rounded-lg transition ${
+                        activeTab === 'Qualification' ? 'bg-indigo-500 text-white' : 'bg-gray-700 text-slate-300'
+                    } hover:bg-indigo-400`}
+                    onClick={handleQualificationClick}
+                >
+                    <i className="fa-solid fa-briefcase"></i>
+                    <span>Experience</span>
+                </div>
+            </div>
 
-      <div
-        className={`relative grid grid-cols-2 md:gap-x-20 gap-x-12 mt-5 ${
-          activeTab === "Qualification" ? "hidden" : ""
-        }`}
-      >
-        {/* First Qualification (Left Side) */}
-        <div className="flex justify-end">
-          <div className="flex flex-col text-end mr-5">
-            <h6 className="md:text-base text-sm">Elementary & Middle School</h6>
-            <span className="text-slate-300 md:text-sm text-xs">
-              Lav Kush Talent Academy, Salumber
-            </span>
-            <span className="mt-2 text-slate-300 md:text-sm text-xs">
-              <i className="fa-regular fa-calendar mr-1 md:text-sm text-xs"></i>
-              2008-2018
-            </span>
-          </div>
-          <div className="-mr-8">
-            <span className="qualification-rounder bg-indigo-400"></span>
-            <span className="qualification-line bg-indigo-400"></span>
-          </div>
-        </div>
+            {/* Education Content */}
+            {activeTab === 'Experience' && (
+                <div className="grid md:grid-cols-2 gap-12">
+                    <div className="flex flex-col items-end">
+                        <div className="bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition">
+                            <h3 className="text-xl font-semibold">Elementary & Middle School</h3>
+                            <p className="text-slate-400 mt-2">Gyan Sudha Saini AVM Arniya (Dausa)</p>
+                            <span className="text-indigo-300 mt-2 block">
+                                <i className="fa-regular fa-calendar mr-2"></i>2009-2018
+                            </span>
+                        </div>
+                    </div>
+                    <div className="flex flex-col items-start">
+                        <div className="bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition">
+                            <h3 className="text-xl font-semibold">High School</h3>
+                            <p className="text-slate-400 mt-2">Abhinav Vidya Mandir Sr. Sec. School Bandikui (Dausa)</p>
+                            <span className="text-indigo-300 mt-2 block">
+                                <i className="fa-regular fa-calendar mr-2"></i>2018-2021
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            )}
 
-        {/* Second Qualification (Right Side) */}
-        <div className="relative flex items-start mt-28">
-          <div className="-ml-[1.8rem] md:-ml-[3.8rem]">
-            <span className="qualification-rounder bg-indigo-400"></span>
-            <span className="qualification-line bg-indigo-400"></span>
-          </div>
-          <div className="flex flex-col items-start ml-5">
-            <h6 className="md:text-base text-sm">High School</h6>
-            <span className="text-slate-300 md:text-sm text-xs">
-              Guru Nanak Public School, Udaipur
-            </span>
-            <span className="mt-2 text-slate-300 md:text-sm text-xs">
-              <i className="fa-regular fa-calendar mr-1 md:text-sm text-xs"></i>{" "}
-              2018-2021
-            </span>
-          </div>
-        </div>
-
-        {/* third Qualification (Left Side) */}
-        <div className="flex -mt-6">
-          <div className="flex flex-col text-end mr-5">
-            <h6 className="md:text-base text-sm">
-              B.Tech, Computer Science & Engineering
-            </h6>
-            <span className="text-slate-300 md:text-sm text-xs">
-              College of Technology & Engineering, Udaipur
-            </span>
-            <span className="mt-2 text-slate-300 md:text-sm text-xs">
-              <i className="fa-regular fa-calendar mr-1 md:text-sm text-xs"></i>{" "}
-              2021-present
-            </span>
-          </div>
-          <div className="-mr-8">
-            <span className="qualification-rounder bg-indigo-400"></span>
-            <span className="qualification-line bg-indigo-400"></span>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className={`relative grid grid-cols-2 md:gap-x-20 gap-x-12 mt-5 ${
-          activeTab === "Experience" ? "hidden" : ""
-        }`}
-      >
-        {/* First Experience (Left Side) */}
-        <div className="flex justify-end">
-          <div className="flex flex-col text-end mr-5">
-            <h6 className="md:text-base text-sm">
-              Full Stack Development training
-            </h6>
-            <span className="text-slate-300 md:text-sm text-xs">Pregrad</span>
-            <span className="mt-2 text-slate-300 md:text-sm text-xs">
-              <i className="fa-regular fa-calendar mr-1 md:text-sm text-xs"></i>
-              June 2023 - Sept. 2023
-            </span>
-          </div>
-          <div className="-mr-8">
-            <span className="qualification-rounder bg-indigo-400"></span>
-            <span className="qualification-line bg-indigo-400"></span>
-          </div>
-        </div>
-
-        {/* Second Experience (Right Side) */}
-        <div className="relative flex items-start mt-28">
-          <div className="-ml-[1.8rem] md:-ml-[3.8rem]">
-            <span className="qualification-rounder bg-indigo-400"></span>
-            <span className="qualification-line bg-indigo-400"></span>
-          </div>
-          <div className="flex flex-col items-start ml-5">
-            <h6 className="md:text-base text-sm">Web Development Internship</h6>
-            <span className="text-slate-300 md:text-sm text-xs">
-              Virtual Coders, Ahmedabad
-            </span>
-            <span className="mt-2 text-slate-300 md:text-sm text-xs">
-              <i className="fa-regular fa-calendar mr-1 md:text-sm text-xs"></i>
-              June 2023 - Jul 2023
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+            {/* Experience Content */}
+            {activeTab === 'Qualification' && (
+                <div className="grid md:grid-cols-2 gap-12">
+                    <div className="flex flex-col items-end">
+                        <div className="bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition">
+                            <h3 className="text-xl font-semibold">Full Stack Development Training</h3>
+                            <p className="text-slate-400 mt-2">Physics Wallah</p>
+                            <span className="text-indigo-300 mt-2 block">
+                                <i className="fa-regular fa-calendar mr-2"></i>June 2023 - Sept. 2023
+                            </span>
+                        </div>
+                    </div>
+                    <div className="flex flex-col items-start">
+                        <div className="bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition">
+                            <h3 className="text-xl font-semibold">Web Development Internship</h3>
+                            <p className="text-slate-400 mt-2">Code Clause, Pune, India</p>
+                            <span className="text-indigo-300 mt-2 block">
+                                <i className="fa-regular fa-calendar mr-2"></i>June 2024 - July 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </section>
+    );
 };
 
 export default Qualification;

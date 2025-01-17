@@ -5,112 +5,82 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLinkClick = () => {
-    if (isOpen) {
-      setIsOpen(false);
-    }
+    setIsOpen(false);
   };
 
   return (
-    <nav id="home" className="bg-navcolor sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 relative">
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
-              <a
-                href="#Home"
-                className="text-white no-underline md:text-2xl text-xl font-serif"
-              >
-                Rahul
-              </a>
-            </div>
+    <nav id="home">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex justify-between h-16 items-center">
+          {/* Logo */}
+          <div className="flex-shrink-0 flex items-center">
+            <a
+              href="#Home"
+              className="text-white text-xl md:text-2xl font-serif font-bold hover:opacity-90 transition duration-300"
+            >
+              Rahul
+            </a>
           </div>
-          <div className="flex items-center">
-            <div className="hidden lg:block text-lg">
+
+          {/* Desktop Links */}
+          <div className="hidden lg:flex items-center space-x-6">
+            {[
+              { href: "#Home", label: "Home" },
+              { href: "#about", label: "About" },
+              { href: "#skills", label: "Skills" },
+              { href: "#my-portfolio", label: "Project" },
+              { href: "#qualification", label: "Qualification" },
+              { href: "#contact", label: "Contact" },
+            ].map((link, index) => (
               <a
-                href="#Home"
-                className="text-white hover:bg-gray-700 px-3 py-2 rounded-md no-underline"
+                key={index}
+                href={link.href}
+                className="text-white text-lg hover:opacity-80 transition duration-300"
               >
-                Home
+                {link.label}
               </a>
-              <a
-                href="#about"
-                className="text-white hover:bg-gray-700 px-3 py-2 rounded-md no-underline"
-              >
-                About
-              </a>
-              <a
-                href="#skills"
-                className="text-white hover:bg-gray-700 px-3 py-2 rounded-md no-underline"
-              >
-                Skills
-              </a>
-              <a
-                href="#my-portfolio"
-                className="text-white hover:bg-gray-700 px-3 py-2 rounded-md no-underline"
-              >
-               Project
-              </a>
-              <a
-                href="#contact"
-                className="text-white hover:bg-gray-700 px-3 py-2 rounded-md no-underline"
-              >
-                Contact
-              </a>
-            </div>
-            <div className="block lg:hidden">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 px-3 py-2 rounded-md"
-              >
-                {isOpen ? <FaTimes /> : <FaBars />}
-              </button>
-            </div>
+            ))}
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-white text-2xl hover:opacity-80 focus:outline-none"
+            >
+              {isOpen ? <FaTimes /> : <FaBars />}
+            </button>
           </div>
         </div>
       </div>
-      <div
-        className={`${
-          isOpen ? "block" : "hidden"
-        } absolute top-16 inset-x-0 bg-navcolor lg:hidden transition duration-500 ease-in-out`}
-      >
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          <a
-            href="#home"
-            onClick={handleLinkClick}
-            className="text-white block hover:bg-gray-700 px-3 py-2 rounded-md no-underline"
-          >
-            Home
-          </a>
-          <a
-            href="#about"
-            onClick={handleLinkClick}
-            className="text-white block hover:bg-gray-700 px-3 py-2 rounded-md no-underline"
-          >
-            About
-          </a>
-          <a
-            href="#skills"
-            onClick={handleLinkClick}
-            className="text-white block hover:bg-gray-700 px-3 py-2 rounded-md no-underline"
-          >
-            Skills
-          </a>
-          <a
-            href="#my-portfolio"
-            onClick={handleLinkClick}
-            className="text-white block hover:bg-gray-700 px-3 py-2 rounded-md no-underline"
-          >
-            Portfolio
-          </a>
-          <a
-            href="#contact"
-            onClick={handleLinkClick}
-            className="text-white block hover:bg-gray-700 px-3 py-2 rounded-md no-underline"
-          >
-            Contact
-          </a>
+
+      {/* Mobile Full-Screen Menu */}
+      {isOpen && (
+        <div className="lg:hidden fixed inset-0 bg-gradient-to-r from-black via-gray-800 to-black z-50 flex flex-col items-center justify-center space-y-6">
+          {/* Close Button */}
+          <div className="absolute top-5 right-5 text-white text-3xl cursor-pointer" onClick={() => setIsOpen(false)}>
+            <FaTimes />
+          </div>
+          
+          {[
+            { href: "#Home", label: "Home" },
+            { href: "#about", label: "About" },
+            { href: "#skills", label: "Skills" },
+            { href: "#my-portfolio", label: "Project" },
+            { href: "#qualification", label: "Qualification" },
+            { href: "#contact", label: "Contact" },
+          ].map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              onClick={handleLinkClick}
+              className="text-white text-3xl font-semibold hover:opacity-80 transition duration-300"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
-      </div>
+      )}
     </nav>
   );
 }

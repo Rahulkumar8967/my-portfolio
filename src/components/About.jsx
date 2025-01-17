@@ -1,41 +1,51 @@
-import React from "react";
-import Qualification from "./Qualification"; // Import the Qualification component
+// About.js
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
+import myImage from './pic1RAHUL.png';
 
 const About = () => {
-  return (
-    <div id="about" className="px-4 py-8 text-white font-bold">
-      <div className="max-w-4xl mx-auto">
-        <div className="mb-8">
-          <h2 className="text-4xl font-bold border-b-4 border-gray-500 inline-block">
-            About
-          </h2>
-        </div>
-        <div className="flex flex-col md:flex-row">
-          <div className="md:w-1/2">
-            <p className="text-xl mt-5 mb-8">
-              Hi there! I'm Rahul Kumar Saini, a second-year student passionate
-              about full-stack development, particularly in the MERN stack. I
-              have hands-on experience with MongoDB, Express.js, React.js, and
-              Node.js, and I love building robust web applications that provide
-              seamless user experiences.
-            </p>
-            <p className="text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-              officia optio, corporis eius reprehenderit sit eum tenetur enim
-              reiciendis at exercitationem pariatur atque, ea dolorum explicabo
-              quas. Asperiores, nobis quibusdalorem20 Lorem ipsum dolor sit amet
-              
-            </p>
-          </div>
+    return (
+        <div id='about' className='min-h-screen w-full mt-36 text-white px-6 py-12 md:scroll-mt-24'>
+            <div className='text-center font-poppins'>
+                <h1 className='md:text-4xl text-4xl font-bold inline border-b border-gray-500'>About Me</h1>
+                <p className='text-slate-300 md:text-lg text-sm -mt-0'>My Experience</p>
+            </div>
 
-          {/* Replace Featured Projects section with Qualification component */}
-          <div className="md:w-1/2 mt-8 md:mt-0">
-            <Qualification />
-          </div>
+            <div className='flex md:mt-6 md:flex-row flex-col justify-center items-center'>
+                
+                <img  
+                    className="rounded-full mx-auto w-40 h-40 md:w-96 md:h-96 border-2 border-indigo-600 hover:scale-105 transition duration-300 mt-10" 
+                    src={myImage} alt="Rahul" 
+                />
+
+                <div className='lg:ml-28 md:ml-10 md:flex flex-col text-center'>
+                    <div className='flex gap-2 mb-4 justify-center md:justify-normal mt-6 md:mt-0'>
+                        <div className='bg-indigo-900 lg:w-32 md:w-28 lg:h-24 md:h-24 w-24 h-20 flex flex-col justify-center items-center rounded-xl'>
+                            <i className="fa-solid fa-medal lg:text-lg md:text-base text-sm"></i>
+                            <span className='mt-1 md:text-base text-sm'>Experience</span>
+                            <span className='md:text-xs text-[10px] text-slate-300'>1+ year</span>
+                        </div>
+                        <div className='bg-indigo-900 lg:w-32 md:w-28 lg:h-24 md:h-24 w-24 h-20 flex flex-col justify-center items-center rounded-xl'>
+                            <i className="fa-solid fa-medal lg:text-lg md:text-base text-sm"></i>
+                            <span className='mt-1 md:text-base text-sm'>Completed</span>
+                            <span className='md:text-xs text-[10px] text-slate-300'>5+ Projects</span>
+                        </div>
+                        <div className='bg-indigo-900 lg:w-32 md:w-28 lg:h-24 md:h-24 w-24 h-20 flex flex-col justify-center items-center rounded-xl'>
+                            <i className="fa-solid fa-medal lg:text-lg md:text-base text-sm"></i>
+                            <span className='mt-1 md:text-base text-sm'>Support</span>
+                            <span className='md:text-xs text-[10px] text-slate-300'>Online 24/7</span>
+                        </div>
+                    </div>
+                    <p className='md:w-[26rem] w-80 md:mb-5 mb-4 lg:text-base text-sm md:text-left'>
+                        Devoted MERN stack enthusiast. Crafting elegant, user-focused web solutions. Skilled in frontend and backend technologies, weaving creativity and efficiency into every project.
+                    </p>
+                    <button className='bg-indigo-900 hover:bg-indigo-700 rounded-xl h-11 w-40'>
+                        <a href='../myResume.pdf' download='Rahul resume.pdf' className='text-white no-underline'>Download Resume <i className="fa-regular fa-file ml-1"></i></a>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default About;
