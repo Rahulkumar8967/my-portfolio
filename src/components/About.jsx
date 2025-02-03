@@ -1,5 +1,3 @@
-// About.js
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
 
 const About = () => {
@@ -46,7 +44,7 @@ const About = () => {
                 </p>
 
                 <button className='bg-indigo-900 hover:bg-indigo-700 rounded-xl h-11 w-40 text-white'>
-                    <a href='../../rahulresume.pdf' download='Rahul_Resume.pdf' className='no-underline'>
+                    <a href='/rahulresume.pdf' download='rahulresume.pdf' className='no-underline'>
                         Download Resume <i className="fa-regular fa-file ml-1"></i>
                     </a>
                 </button>
