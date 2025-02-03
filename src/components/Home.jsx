@@ -1,22 +1,18 @@
-// Home.js
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 import heroImage from "./pic1RAHUL.png";
 import { FaSmile } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <div
-      id="Home"
-      className=" min-h-screen w-full mt-15 text-white px-6 py-12 md:scroll-mt-24"
-    >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
+    <div id="Home" className="min-h-screen w-full text-white px-6 py-12 md:scroll-mt-24">
+      <div className="max-w-screen-lg mx-auto flex flex-col-reverse md:flex-row items-center justify-between h-full px-4 md:space-x-8 lg:space-x-12">
+        
         {/* Left Section: Text Content */}
-        <div className="flex flex-col justify-center h-full text-center md:text-left">
-          <h2 className="text-4xl sm:text-7xl font-bold text-indigo-400 ">
+        <div className="flex flex-col justify-center h-full text-center md:text-left w-full md:w-1/2">
+          <h2 className="text-4xl sm:text-6xl font-bold text-indigo-400">
             I'm a FullStack Developer
           </h2>
-          <p className="text-slate-300 py-10  max-w-md text-lg sm:text-xl">
+          <p className="text-slate-300 py-8 max-w-md text-lg sm:text-xl">
             I have excitement in learning new Technologies. Currently, I love to
             work on web applications using Technologies like React, Tailwind
             CSS, Express, and MongoDB.
@@ -31,13 +27,14 @@ const Home = () => {
         </div>
 
         {/* Right Section: Image */}
-        <div className="mt-10 md:mt-0">
+        <div className="w-full md:w-1/2 flex justify-center">
           <img
             src={heroImage}
-            alt="RahulImage"
-            className="rounded-2xl mx-auto w-80 h-80 md:w-96 md:h-96 border-4 border-indigo-400 hover:scale-105 transition duration-300 mt-10"
+            alt="Rahul's Profile"
+            className="w-54 h-64 border-4 border-white object-cover rounded-xl"
           />
         </div>
+
       </div>
     </div>
   );
