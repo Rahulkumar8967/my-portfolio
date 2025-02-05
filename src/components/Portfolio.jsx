@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 import proj1 from "../assets/proj1.png";
 import proj2 from "../assets/proj2.png";
@@ -45,7 +44,7 @@ const Portfolio = () => {
           <p className="py-6">Browse through some of my recent projects below</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-8 px-12 sm:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 px-6 sm:px-0">
           {portfolios.map(({ id, src, demoLink, codeLink }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg overflow-hidden flex flex-col">
               <img
