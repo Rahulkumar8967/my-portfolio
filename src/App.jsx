@@ -9,8 +9,6 @@ import SocialLink from './components/SocialLink'
 import Skills from './components/Work'
 
 function App() {
- 
-
   return (
     //bg-gradient-to-b from-black to-gray-800
     <div className="">

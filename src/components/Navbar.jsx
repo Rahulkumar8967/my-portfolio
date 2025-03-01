@@ -23,7 +23,7 @@ function Navbar() {
           </div>
 
           {/* Desktop Links */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-6 mt-2">
             {[
               { href: "#Home", label: "Home" },
               { href: "#about", label: "About" },
@@ -45,7 +45,7 @@ function Navbar() {
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen(!isOpen)} // Toggles menu visibility on click
               className="text-white text-2xl hover:opacity-80 focus:outline-none"
             >
               {isOpen ? <FaTimes /> : <FaBars />}
