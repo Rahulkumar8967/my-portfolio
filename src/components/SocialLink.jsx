@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { BsDownload, BsFillPersonLinesFill } from "react-icons/bs";
+import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const SocialLink = () => {
   const links = [
@@ -14,6 +14,7 @@ const SocialLink = () => {
       ),
       href: "https://www.linkedin.com/in/rahul-kumar-saini-43a29624a/",
       style: "rounded-tr-md",
+      bgColor: "bg-blue-700",
     },
 
     {
@@ -24,6 +25,7 @@ const SocialLink = () => {
         </>
       ),
       href: "https://github.com/Rahulkumar8967",
+      bgColor: "bg-gray-800",
     },
 
     {
@@ -34,6 +36,7 @@ const SocialLink = () => {
         </>
       ),
       href: "mailto:sainirahul8967@gmail.com",
+      bgColor: "bg-red-600",
     },
 
     {
@@ -43,28 +46,25 @@ const SocialLink = () => {
           Resume <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "/rahulresume.pdf",  
+      href: "/rahulresume.pdf",
       style: "rounded-br-md",
-      download: true, 
+      download: true,
+      bgColor: "bg-green-700",
     },
   ];
 
   return (
-    <div className="hidden lg:flex flex-col fixed top-1/3 left-0">
+    <div className="hidden lg:flex flex-col fixed top-1/3 left-0 z-50">
       <ul>
-        {links.map(({ id, child, href, style, download }) => (
+        {links.map(({ id, child, href, style, download, bgColor }) => (
           <li
             key={id}
-            className={
-              "flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-700" +
-              " " +
-              style
-            }
+            className={`flex justify-between items-center w-48 h-14 px-4 ml-[-130px] hover:ml-[-10px] hover:rounded-md duration-500 ${bgColor} ${style} transition-all`}
           >
             <a
               href={href}
-              className="flex justify-between items-center w-full text-white text-xl"
-              download={download ? "true" : undefined}  // Ensuring download is set properly
+              className="flex justify-between items-center w-full text-white text-lg font-semibold hover:scale-105 transition-transform duration-300"
+              download={download ? "true" : undefined}
               target="_blank"
               rel="noreferrer"
             >

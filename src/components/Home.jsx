@@ -22,9 +22,11 @@ const Home = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-            Hi, I'm <span className="text-indigo-400">Rahul</span>
-          </h1>
+         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mt-6 sm:mt-10 md:mt-16">
+  Hi, I'm <span className="text-indigo-400">Rahul</span>
+</h1>
+
+
           <motion.h2
             className="text-xl sm:text-2xl lg:text-3xl font-semibold text-indigo-300"
             initial={{ y: -10, opacity: 0 }}

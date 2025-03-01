@@ -12,11 +12,12 @@ function Navbar() {
     <nav className="fixed top-5 left-1/2 transform -translate-x-1/2 w-[90%] z-50 flex justify-between items-center px-6">
       {/* Logo */}
       <a
-        href="#home"
-        className="text-3xl font-extrabold tracking-widest text-white transition duration-300 transform hover:scale-110 hover:text-blue-400 drop-shadow-[0_0_10px_#3b82f6]"
-      >
-        RAHUL
-      </a>
+  href="#home"
+  className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wider text-white transition duration-300 transform hover:scale-110 hover:text-blue-400 drop-shadow-[0_0_10px_#3b82f6]"
+>
+  RAHUL
+</a>
+
 
       {/* Desktop Links */}
       <div className="hidden lg:flex items-center space-x-8">
