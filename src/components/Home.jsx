@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 const Home = () => {
   return (
     <section
-      id="Home"
+      id="home"
       className="min-h-screen w-full flex items-center justify-center px-6 sm:px-12 lg:px-20 py-16"
     >
       <motion.div

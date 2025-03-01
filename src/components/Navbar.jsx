@@ -25,7 +25,7 @@ function Navbar() {
           { href: "#home", label: "Home" },
           { href: "#about", label: "About" },
           { href: "#skills", label: "Skills" },
-          { href: "#projects", label: "Projects" },
+          { href: "#my-portfolio", label: "Projects" },
           { href: "#qualification", label: "Qualification" },
           { href: "#contact", label: "Contact" },
         ].map((link, index) => (
@@ -69,7 +69,7 @@ function Navbar() {
           { href: "#home", label: "Home" },
           { href: "#about", label: "About" },
           { href: "#skills", label: "Skills" },
-          { href: "#projects", label: "Projects" },
+          { href: "#my-portfolio", label: "Projects" },
           { href: "#qualification", label: "Qualification" },
           { href: "#contact", label: "Contact" },
         ].map((link, index) => (
