@@ -22,10 +22,9 @@ const Home = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mt-6 sm:mt-10 md:mt-16">
-  Hi, I'm <span className="text-indigo-400">Rahul</span>
-</h1>
-
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mt-6 sm:mt-10 md:mt-16">
+            Hi, I'm <span className="text-indigo-400">Rahul</span>
+          </h1>
 
           <motion.h2
             className="text-xl sm:text-2xl lg:text-3xl font-semibold text-indigo-300"
@@ -36,10 +35,12 @@ const Home = () => {
             Full Stack Developer 🚀
           </motion.h2>
           <p className="text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-md mx-auto md:mx-0">
-            I build scalable web apps with <span className="text-indigo-400 font-semibold">React</span>,{" "}
+            I build scalable web apps with{" "}
+            <span className="text-indigo-400 font-semibold">ReactJs</span>,{" "}
             <span className="text-indigo-400 font-semibold">Tailwind CSS</span>,{" "}
-            <span className="text-indigo-400 font-semibold">Express</span>, and{" "}
-            <span className="text-indigo-400 font-semibold">MongoDB</span>.
+            <span className="text-indigo-400 font-semibold">Express</span>,{" "}
+            <span className="text-indigo-400 font-semibold">MongoDB</span>, and{" "}
+            <span className="text-indigo-400 font-semibold">NodeJs</span>.
           </p>
           <motion.div
             className="mt-6 flex justify-center md:justify-start"

@@ -54,6 +54,8 @@ const Portfolio = () => {
           <h1 className="text-4xl md:text-5xl font-bold inline border-b-4 border-indigo-500">
             My Projects
           </h1>
+
+          {/* <h1 className="text-4xl">My Projects</h1> */}
           <p className="text-slate-300 md:text-lg text-sm mt-3">
             Browse through some of my recent projects below
           </p>

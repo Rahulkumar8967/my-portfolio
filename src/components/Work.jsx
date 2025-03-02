@@ -29,7 +29,7 @@ const Skills = () => {
             { name: "CSS & Tailwind", level: "Advanced" },
             { name: "JavaScript", level: "Intermediate" },
             { name: "Git & GitHub", level: "Intermediate" },
-            { name: "React.js", level: "Intermediate" },
+            { name: "React.js", level: "Advanced" },
             { name: "UI/UX Design", level: "Beginner" },
           ]}
         />
@@ -41,8 +41,8 @@ const Skills = () => {
             { name: "Node.js", level: "Intermediate" },
             { name: "Express.js", level: "Intermediate" },
             { name: "MongoDB", level: "Intermediate" },
-            { name: "MySQL", level: "Beginner" },
-            { name: "SQL", level: "Beginner" },
+            { name: "MySQL", level: "Intermediate" },
+            { name: "SQL", level: "Intermediate" },
             { name: "REST API", level: "Intermediate" },
           ]}
         />

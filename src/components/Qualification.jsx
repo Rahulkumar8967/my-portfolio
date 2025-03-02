@@ -18,7 +18,7 @@ const Qualification = () => {
                 title: "Bachelor of Technology (B.Tech) Computer Science Engineering",
                 institution: "College Of Technology And Engineering,Udaipur",
                 duration: "2022 - 2026",
-                extra: "CGPA: 7.22",
+                extra: "OGPA: 7.22",
                 icon: "fa-solid fa-graduation-cap",
             },
         ],
