@@ -5,7 +5,7 @@ import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Portfolio from './components/Portfolio'
 import Qualification from './components/Qualification'
-import SocialLink from './components/SocialLink'
+// import SocialLink from './components/SocialLink'
 import Skills from './components/Work'
 
 function App() {
@@ -17,8 +17,8 @@ function App() {
       <Portfolio />
       <Qualification/>
       <Skills />
-      <SocialLink />
-      <Contact />
+      {/* <SocialLink /> */}
+      <Contact/>
     </div>
   );
 }

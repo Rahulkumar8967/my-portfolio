@@ -13,10 +13,8 @@ const SocialLink = () => {
         </>
       ),
       href: "https://www.linkedin.com/in/rahul-kumar-saini-43a29624a/",
-      style: "rounded-tr-md",
       bgColor: "bg-blue-700",
     },
-
     {
       id: 2,
       child: (
@@ -27,7 +25,6 @@ const SocialLink = () => {
       href: "https://github.com/Rahulkumar8967",
       bgColor: "bg-gray-800",
     },
-
     {
       id: 3,
       child: (
@@ -38,7 +35,6 @@ const SocialLink = () => {
       href: "mailto:sainirahul8967@gmail.com",
       bgColor: "bg-red-600",
     },
-
     {
       id: 4,
       child: (
@@ -47,23 +43,22 @@ const SocialLink = () => {
         </>
       ),
       href: "/rahulresume.pdf",
-      style: "rounded-br-md",
       download: true,
       bgColor: "bg-green-700",
     },
   ];
 
   return (
-    <div className="hidden lg:flex flex-col fixed top-1/3 left-0 z-50">
-      <ul>
-        {links.map(({ id, child, href, style, download, bgColor }) => (
+    <div className="flex flex-col items-center justify-center mt-6">
+      <ul className="flex flex-wrap justify-center gap-4">
+        {links.map(({ id, child, href, download, bgColor }) => (
           <li
             key={id}
-            className={`flex justify-between items-center w-48 h-14 px-4 ml-[-130px] hover:ml-[-10px] hover:rounded-md duration-500 ${bgColor} ${style} transition-all`}
+            className={`flex items-center justify-center px-6 py-3 rounded-lg text-white font-semibold shadow-md transition-all hover:scale-105 ${bgColor}`}
           >
             <a
               href={href}
-              className="flex justify-between items-center w-full text-white text-lg font-semibold hover:scale-105 transition-transform duration-300"
+              className="flex items-center gap-2"
               download={download ? "true" : undefined}
               target="_blank"
               rel="noreferrer"
