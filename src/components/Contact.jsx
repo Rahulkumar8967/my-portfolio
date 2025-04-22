@@ -57,7 +57,7 @@ const Contact = () => {
 
       <div className="mt-8">
         <h1 className="text-center text-yellow-300 font-extrabold">OR</h1>
-        <SocialLink /> {/* Include SocialLink here */}
+        <SocialLink />
       </div>
     </div>
   );

@@ -58,7 +58,9 @@ const SkillCard = ({ title, skills }) => {
       <h6 className="mb-4 md:mt-2 text-lg font-semibold">{title}</h6>
       <div className="grid grid-cols-2 gap-6 md:gap-x-12 gap-x-10">
         {skills.map((skill, index) => (
-          <SkillWithCheckIcon key={index} skill={skill.name} level={skill.level} />
+          <SkillWithCheckIcon key={index}
+            skill={skill.name}
+            level={skill.level} />
         ))}
       </div>
     </div>
